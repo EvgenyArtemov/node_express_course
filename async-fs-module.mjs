@@ -1,17 +1,20 @@
 import { readFile, writeFile } from 'fs';
 
 // callback hell methodology ;)
-export default readFile('./content/first.txt', { encoding: 'utf8'}, (err, data) => {
+console.log('start task')
+readFile('./content/first.txt', { encoding: 'utf8'}, (err, data) => {
   if(err){
     console.log(err);
     throw new Error(err);
   }
+  console.log('done reading 1')
   const first = data;
   readFile('./content/subfolder/test.txt', 'utf8', (err, data) => {
     if(err){
       console.log(err);
       throw new Error(err);
     }
+  console.log('done reading 2')
     const second = data;
 
     writeFile(
@@ -23,7 +26,19 @@ export default readFile('./content/first.txt', { encoding: 'utf8'}, (err, data) 
         return;
       }
       console.log(data);
+      console.log('done writing')
     }
       )
   })
 });
+
+console.log('start next task')
+
+// prints to the console
+
+// start task
+// start next task
+// done reading 1
+// done reading 2
+// undefined
+// done writing
