@@ -6,6 +6,7 @@ import './App.mjs';
 import './event-emitter-module.mjs';
 import { writeBigFile } from './content/big-fle.mjs'
 import './readStream-module.mjs';
+import './http-stream.mjs';
 
 osModule();
 // pathModule();
