@@ -4,7 +4,7 @@ import { fsModule } from './fs-module.mjs';
 // import './async-fs-module.mjs'; // import default calls module internals 
 import './App.mjs';
 import './event-emitter-module.mjs';
-import { writeBigFile } from './content/big-fle.mjs'
+// import { writeBigFile } from './content/big-fle.mjs'
 import './readStream-module.mjs';
 import './http-stream.mjs';
 
@@ -14,4 +14,4 @@ osModule();
 // asyncFsModule();
 
 // generate really big file to read it later with read Stream B)
-writeBigFile();
+// writeBigFile();
